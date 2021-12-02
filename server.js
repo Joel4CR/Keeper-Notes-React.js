@@ -44,7 +44,7 @@ app.post("/notes",(req,res)=>{
         }
 })})
 app.delete("/notes",(req,res)=>{
-    Note.deleteOne({title:req.body.title},(err,data)=>{
+    Note.deleteOne({_id:req.body._id},(err,data)=>{
         if(err)
         res.status(500).send(err)
         else
